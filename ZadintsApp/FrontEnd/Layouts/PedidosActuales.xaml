@@ -1,0 +1,120 @@
+﻿<Page x:Class="App.Components.Layouts.Content.PedidosActuales"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App.Components.Layouts.Content"
+        mc:Ignorable="d"
+         d:DesignHeight="550" d:DesignWidth="1020"
+        Title="VentasHoy">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="330"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Margin="19,9,19,11" Grid.Column="1">
+
+            <TextBlock x:Name="lblTicket"
+               FontSize="18"
+               FontWeight="Bold"/>
+
+            <TextBlock x:Name="lblFecha"
+               Margin="0,5"/>
+
+            <TextBlock x:Name="lblTotal"
+               Margin="0,5"
+               FontWeight="Bold"/>
+
+            <Separator Margin="0,10"/>
+            <TextBlock x:Name="lblTotal_Copiar"
+            FontWeight="Bold" Height="27" Width="622" Text="Pedido del cliente"/>
+            <ListBox x:Name="lstDetalle" Height="308"/>
+
+        </StackPanel>
+        <Button x:Name="btnAtendidos" 
+            Content="Cliente atendido"
+            Foreground="White"
+            Background="#A0A532"
+            Template="{DynamicResource ButtonTwo}"
+            FontSize="14.5"
+            FontWeight="SemiBold" Margin="420,453,19,21" Click="btnAtendidos_Click" Grid.Column="1" />
+        <Label 
+            x:Name="lblTitleGlobal" 
+            Content="Pedidos en Cola" 
+            HorizontalAlignment="Left" 
+            Margin="17,6,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="25" 
+            FontWeight="Bold" Height="44" Width="256"/>
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            Margin="5,100,5,11"
+            Effect="{DynamicResource ShadowStyle2}"
+            Padding="18">
+            <ListBox x:Name="lstTickets" Background="#F9F9F9"
+            BorderBrush="#EEEEEE" BorderThickness="1" Padding="8" Margin="0,0,3,-8">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="#EEEEEE"
+                            BorderThickness="1" Background="#F0F0F0">
+                                <Image Source="{Binding Foto64}" Height="60"
+                                Stretch="UniformToFill"/>
+                            </Border>
+
+                            <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="S/. " FontSize="12" Foreground="#E8440A"/>
+                                    <TextBlock Text="{Binding Total, StringFormat=F2}"
+                                    FontSize="12" Foreground="#E8440A"/>
+                                    <TextBlock Text="  |  Ticket: " FontSize="12" Foreground="#555"/>
+                                    <TextBlock Text="{Binding NumeroTicket}" FontSize="12" Foreground="#555"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Padding" Value="8,6"/>
+                        <Setter Property="Margin" Value="0,4"/>
+                        <Setter Property="Background" Value="White"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FFE0D8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+            </ListBox>
+        </Border>
+        <Button x:Name="btnAgregarPedido" 
+            Content="Agregar Pedido"
+            Foreground="White"
+            Background="#EA6233"
+            Template="{DynamicResource ButtonTwo}"
+            FontSize="14.5"
+            FontWeight="SemiBold" Margin="245,453,258,21" Grid.Column="1" Click="btnAgregarPedido_Click" />
+        <TextBlock
+            x:Name="lblVentasHoyTitle" 
+            Text="Pedidos en espera..." 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="gray" 
+            FontSize="12" 
+            FontWeight="Light" 
+            IsEnabled="False" Margin="10,77,82,420" FontFamily="Tahoma"/>
+    </Grid>
+</Page>

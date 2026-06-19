@@ -1,0 +1,205 @@
+﻿<Page x:Class="Zrutas.UI.Views.Content.Inventory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Zrutas.UI.Views.Content"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1020"
+      Title="Inventory">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Margin="30,24,30,24">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="342"/>
+                <ColumnDefinition Width="42"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <TextBlock Grid.Row="1" Text="Nombre" FontSize="11"
+               Foreground="#888888" Margin="0,0,0,2"/>
+                <TextBox x:Name="TxtNombre" Grid.Row="2" Padding="8,8" FontSize="13"
+             Foreground="Gray" Background="#F5F5F5" BorderBrush="#E8440A"
+             BorderThickness="0,0,0,2" Tag="Ej: Lomo Saltado"
+             Text="Ej: Lomo Saltado" GotFocus="TextBox_GotFocus"
+             LostFocus="TextBox_LostFocus" Margin="0,0,0,8"/>
+
+                <TextBlock Grid.Row="3" Text="Categoria" FontSize="11"
+               Foreground="#888888" Margin="0,0,0,2"/>
+                <ComboBox x:Name="cbxCategoria" Grid.Row="4" Padding="8,8" FontSize="13"
+             Foreground="Gray" Background="#F5F5F5" BorderBrush="#E8440A"
+             BorderThickness="0,0,0,2" Margin="0,0,0,8">
+
+                    <ComboBoxItem Content="Parrillas"/>
+                    <ComboBoxItem Content="Alitas"/>
+                    <ComboBoxItem Content="Combos"/>
+                    <ComboBoxItem Content="Guarniciones"/>
+                    <ComboBoxItem Content="Pastas"/>
+                    <ComboBoxItem Content="Hamburguesas"/>
+                    <ComboBoxItem Content="Broster"/>
+                    <ComboBoxItem Content="Salchipapas"/>
+                    <ComboBoxItem Content="Bebidas"/>
+                </ComboBox>
+
+
+                <Grid Grid.Row="5" Margin="0,0,0,8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Precio (S/.)" FontSize="11"
+                       Foreground="#888888" Margin="0,0,0,2"/>
+                        <TextBox x:Name="TxtPrecio" Padding="8,8" FontSize="13"
+                     Foreground="Gray" Background="#F5F5F5" BorderBrush="#E8440A"
+                     BorderThickness="0,0,0,2" Tag="Ej: 25.00" Text="Ej: 25.00"
+                     GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Stock" FontSize="11"
+                       Foreground="#888888" Margin="0,0,0,2"/>
+                        <TextBox x:Name="TxtStock" Padding="8,8" FontSize="13"
+                     Foreground="Gray" Background="#F5F5F5" BorderBrush="#E8440A"
+                     BorderThickness="0,0,0,2" Tag="Ej: 10" Text="Ej: 10"
+                     GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                    </StackPanel>
+                </Grid>
+
+                <TextBlock Grid.Row="6" Text="Foto del Producto" FontSize="11"
+               Foreground="#888888" Margin="0,0,0,4"/>
+                <Grid Grid.Row="7" Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="12"/>
+                        <ColumnDefinition Width="90"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Content="Seleccionar Foto"
+                Click="BtnSeleccionarFoto_Click"
+                Padding="0,10" FontSize="12" FontWeight="Bold"
+                Background="White" Foreground="#E8440A"
+                BorderBrush="#E8440A" BorderThickness="1" Cursor="Hand" Margin="0,10,0,-10"/>
+                    <Border Grid.Column="2" BorderBrush="#EEEEEE" BorderThickness="1"
+                Background="#F9F9F9" Margin="0,10,0,-10">
+                        <Image x:Name="ImgFotoPlato" Height="80"
+                   Stretch="UniformToFill" RenderTransformOrigin="0.352,1.292" Margin="0,2,0,-2"/>
+                    </Border>
+                </Grid>
+
+
+                <Button x:Name="btnAgregarProductos" Grid.Row="8" Content="+ AGREGAR PLATO" Click="BtnAgregar_Click"
+            Padding="0,12" FontSize="13" FontWeight="Bold"
+            Background="#E8440A" Foreground="White" BorderThickness="0"
+            Cursor="Hand" Margin="0,24,0,26" Grid.RowSpan="2"/>
+                <Button x:Name="btnEliminarProductos" Grid.Row="9" Content="— ELIMINAR SELECCIONADO"
+            Click="BtnEliminar_Click" Padding="0,12" FontSize="13"
+            FontWeight="Bold" Background="White" Foreground="#E8440A"
+            BorderBrush="#E8440A" BorderThickness="1" Cursor="Hand" Margin="0,78,0,-46"/>
+            </Grid>
+
+            <Rectangle Grid.Column="1"
+                    Width="2"
+                    Fill="#DDDDDD"
+                    HorizontalAlignment="Center"/>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                        Text="PLATOS DISPONIBLES"
+                        FontSize="13" FontWeight="Bold"
+                        Foreground="{DynamicResource FontColor}"
+                        Margin="0,0,0,16"/>
+
+                <ListBox x:Name="LstPlatos" Grid.Row="1" Background="#F9F9F9"
+         BorderBrush="#EEEEEE" BorderThickness="1" Padding="8">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="12"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Column="0" BorderBrush="#EEEEEE"
+                        BorderThickness="1" Background="#F0F0F0">
+                                    <Image Source="{Binding Foto64}" Height="60"
+                           Stretch="UniformToFill"/>
+                                </Border>
+
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Nombre}" FontSize="14"
+                               FontWeight="Bold" Foreground="#222222"/>
+                                    <TextBlock Text="{Binding Cartegoria}" FontSize="11"
+                               Foreground="#888888"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="S/. " FontSize="12" Foreground="#E8440A"/>
+                                        <TextBlock Text="{Binding Precio, StringFormat=F2}"
+                                   FontSize="12" Foreground="#E8440A"/>
+                                        <TextBlock Text="  |  Stock: " FontSize="12" Foreground="#555"/>
+                                        <TextBlock Text="{Binding Stock}" FontSize="12" Foreground="#555"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Padding" Value="8,6"/>
+                            <Setter Property="Margin" Value="0,4"/>
+                            <Setter Property="Background" Value="White"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#FFE0D8"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+
+                <TextBlock Grid.Row="2"
+                        x:Name="TxtTotal"
+                        FontSize="12"
+                        Foreground="#AAAAAA"
+                        Margin="0,12,0,0"/>
+            </Grid>
+        </Grid>
+        <Label 
+            x:Name="lblTitleGlobal" 
+            Content="Inventario" 
+            HorizontalAlignment="Left" 
+            Margin="23,0,0,0" 
+            VerticalAlignment="Top" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="25" 
+            FontWeight="Bold" Height="43" Width="131"/>
+    </Grid>
+</Page>

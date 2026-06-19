@@ -1,0 +1,16 @@
+﻿<Application x:Class="ZadintsApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:App.Components.windows"
+             StartupUri="FrontEnd\Windows\Auth.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/FrontEnd/Components/Theme/Glaciar.xaml"/>
+                <ResourceDictionary Source="/FrontEnd/Components/Combobox.xaml"/>
+                <ResourceDictionary Source="/FrontEnd/Components/ButtonsOne.xaml"/>
+                <ResourceDictionary Source="/FrontEnd/Components/ButtonsTwo.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

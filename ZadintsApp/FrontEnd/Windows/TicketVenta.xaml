@@ -1,0 +1,68 @@
+﻿<Window x:Class="App.Components.windows.TicketVenta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App.Components.windows"
+        mc:Ignorable="d"
+        Title="Venta Registrada" Height="500" Width="400"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5" WindowStyle="None">
+    <Border Margin="15"
+            CornerRadius="15"
+            Background="White">
+
+        <Grid Margin="20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                Text="TICKET CREADO"
+                FontSize="24"
+                FontWeight="Bold"
+                Foreground="#2E7D32"
+                HorizontalAlignment="Center"/>
+
+            <StackPanel Grid.Row="1"
+                        Margin="0,20,0,15">
+
+                <TextBlock x:Name="txtTicket"
+                           FontSize="16"
+                           FontWeight="SemiBold"/>
+
+                <TextBlock x:Name="txtFecha"
+                           FontSize="14"/>
+
+                <TextBlock x:Name="txtHora"
+                           FontSize="14"/>
+            </StackPanel>
+
+            <ListBox x:Name="lstDetalle"
+                     Grid.Row="2"
+                     FontSize="14"/>
+
+            <TextBlock x:Name="txtTotal"
+                       Grid.Row="3"
+                       Margin="0,15,0,15"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Right"/>
+
+            <Button x:Name="btnAceptar" Grid.Row="3"
+                    Foreground="White"
+Background="#A0A532"
+Template="{DynamicResource ButtonTwo}"
+FontSize="14.5"
+                    Content="Aceptar"
+                    Click="Button_Click"
+                    HorizontalAlignment="Center" Margin="0,24,0,0" Width="113"/>
+        </Grid>
+    </Border>
+</Window>

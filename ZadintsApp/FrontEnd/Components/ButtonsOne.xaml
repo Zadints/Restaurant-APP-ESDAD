@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ControlTemplate x:Key="ButtonOne"
+                   TargetType="Button">
+        <Border x:Name="border"
+            CornerRadius="15"
+            SnapsToDevicePixels="True"
+            ClipToBounds="True"
+            BorderThickness="1"
+            
+            BorderBrush="#E8440A"
+            Background="{TemplateBinding Background}">
+            <ContentPresenter HorizontalAlignment="Center"
+                          VerticalAlignment="Center"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="border" Property="Background" Value="#EAF3FB"/>
+                <Setter TargetName="border" Property="BorderBrush" Value="#EDA189"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="border" Property="Background" Value="#F1CAC1"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+            </Trigger>
+
+        </ControlTemplate.Triggers>
+
+    </ControlTemplate>
+</ResourceDictionary>

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>false</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FrontEnd\Layouts\Header\**" />
+    <Compile Remove="FrontEnd\Layouts\Nav\**" />
+    <Compile Remove="BackEnd\Domain\TableDatabase\**" />
+    <EmbeddedResource Remove="FrontEnd\Layouts\Header\**" />
+    <EmbeddedResource Remove="FrontEnd\Layouts\Nav\**" />
+    <EmbeddedResource Remove="BackEnd\Domain\TableDatabase\**" />
+    <None Remove="FrontEnd\Layouts\Header\**" />
+    <None Remove="FrontEnd\Layouts\Nav\**" />
+    <None Remove="BackEnd\Domain\TableDatabase\**" />
+    <Page Remove="FrontEnd\Layouts\Header\**" />
+    <Page Remove="FrontEnd\Layouts\Nav\**" />
+    <Page Remove="BackEnd\Domain\TableDatabase\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+    <PackageReference Include="MySqlConnector" Version="2.6.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.119" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="FrontEnd\Windows\logo.png" />
+    <None Remove="Public\Resources\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Public\Resources\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="FrontEnd\Layouts\Password.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

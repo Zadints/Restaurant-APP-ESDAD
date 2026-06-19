@@ -1,0 +1,294 @@
+﻿<Window x:Class="App.Components.windows.Auth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App.Components.windows"
+        mc:Ignorable="d"
+        WindowStyle="None" 
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        Title="Auth" Height="693" Width="1259">
+
+    <Border 
+    CornerRadius="20" 
+    BorderBrush="{DynamicResource BackgroundMargin}" 
+    BorderThickness="2"
+    SnapsToDevicePixels="True"
+    Padding="0" RenderTransformOrigin="0.515,0.552" Margin="0,0,0,10"
+    Background="{DynamicResource BorderGradientBrush}">
+
+        <Border.Clip>
+            <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,1259,684"/>
+        </Border.Clip>
+
+        <Grid>
+            <Canvas IsHitTestVisible="False">
+
+                <Path Fill="#5865F2" Opacity="0.25" HorizontalAlignment="Left" Stretch="Fill" VerticalAlignment="Center" Width="1264" Height="251" Canvas.Top="475.163">
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathFigure StartPoint="0,300">
+                                <BezierSegment Point1="200,100"
+                           Point2="500,500"
+                           Point3="900,200"/>
+                                <LineSegment Point="900,600"/>
+                                <LineSegment Point="0,600"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+
+
+                <Path Fill="#EB459E" Opacity="0.20" HorizontalAlignment="Left" Stretch="Fill" VerticalAlignment="Top" Width="1281" Height="353" Canvas.Top="475.986" RenderTransformOrigin="0.5,0.5" Canvas.Left="-21.911">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="8.338"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Data>
+                        <PathGeometry>
+                            <PathFigure StartPoint="0,400">
+                                <BezierSegment Point1="250,200"
+                           Point2="600,600"
+                           Point3="1000,300"/>
+                                <LineSegment Point="1000,700"/>
+                                <LineSegment Point="0,700"/>
+                            </PathFigure>
+                        </PathGeometry>
+                    </Path.Data>
+                </Path>
+                <Path Fill="#01D4FF" Opacity="0.20" Stretch="Fill" Width="654" Height="379" Canvas.Top="-76.898" RenderTransformOrigin="0.5,0.5" Canvas.Left="847.056" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="45.111"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Data>
+                        <PathGeometry Figures="M0,400 C250,200 600,600 1000,300 L1000,700 L0,700"/>
+                    </Path.Data>
+                </Path>
+                <Path Fill="#01D4FF" Opacity="0.20" Stretch="Fill" Width="824" Height="476" Canvas.Top="-273.597" RenderTransformOrigin="0.5,0.5" Canvas.Left="837.366" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1"/>
+                            <SkewTransform AngleY="27.406"/>
+                            <RotateTransform Angle="38.761"/>
+                            <TranslateTransform X="-84.071" Y="43.42"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Data>
+                        <PathGeometry Figures="M0,400 C250,200 600,600 1000,300 "/>
+                    </Path.Data>
+                </Path>
+
+
+            </Canvas>
+            <Border 
+        CornerRadius="20" 
+        
+        BorderThickness="2"
+        SnapsToDevicePixels="True"
+        Effect="{DynamicResource ShadowStyle2}"
+        Padding="0" RenderTransformOrigin="0.515,0.552"
+        Background="{DynamicResource BorderGradientBrush}" Margin="390,117,411,117">
+
+                <Grid Margin="-4,0,-2,-2">
+                    <Label 
+                x:Name="lblTitle" 
+                Content="¡Hola de nuevo!" 
+                HorizontalAlignment="Center" 
+                
+                Margin="0,18,0,0" 
+                VerticalAlignment="Top" 
+                AutomationProperties.Name="" 
+                AutomationProperties.HelpText="" 
+                Foreground="{DynamicResource FontColor}" 
+                FontSize="20" 
+                FontWeight="Bold" Width="440" HorizontalContentAlignment="Center"/>
+                    <Label 
+                x:Name="lblDescription" 
+                Content="Nos alegramos mucho de volverte a ver" 
+                HorizontalAlignment="Center" 
+                
+                Margin="0,47,0,0" 
+                VerticalAlignment="Top" 
+                AutomationProperties.Name="" 
+                AutomationProperties.HelpText="" 
+                Foreground="{DynamicResource FontColor}" 
+                FontSize="15" 
+                FontWeight="SemiBold" Width="440" HorizontalContentAlignment="Center"/>
+                    <Label 
+                x:Name="lblAuthMode" 
+                Content="¿Crear una cuenta?" 
+                HorizontalAlignment="Center" 
+                MouseLeftButtonDown="lblAuth_MouseLeftButtonDown"
+                Margin="0,407,0,0" 
+                VerticalAlignment="Top" 
+                AutomationProperties.Name="" 
+                AutomationProperties.HelpText="" 
+                Foreground="{DynamicResource FontColorFotter}" 
+                FontSize="12" 
+                FontWeight="SemiBold" Width="440" HorizontalContentAlignment="Center"/>
+                    <Label 
+                x:Name="lblThemeTitle_Copiar1" 
+                Content="Correo electrónico*" 
+                HorizontalAlignment="Left" 
+                
+                Margin="22,97,0,0" 
+                VerticalAlignment="Top" 
+                AutomationProperties.Name="" 
+                AutomationProperties.HelpText="" 
+                Foreground="{DynamicResource FontColor}" 
+                FontSize="12" 
+                FontWeight="SemiBold" Width="356" HorizontalContentAlignment="Left"/>
+                    <Label 
+                x:Name="lblPassword" 
+                Content="Contraseña *" 
+                HorizontalAlignment="Left" 
+                
+                Margin="22,186,0,0" 
+                VerticalAlignment="Top" 
+                AutomationProperties.Name="" 
+                AutomationProperties.HelpText="" 
+                Foreground="{DynamicResource FontColor}" 
+                FontSize="12" 
+                FontWeight="SemiBold" Width="356" HorizontalContentAlignment="Left"/>
+                    <Button x:Name="btnAuth" 
+                        Content="%btnAuth_Click%"
+                        Foreground="{DynamicResource FontColor}"
+                        FontSize="14.5"
+                        FontWeight="SemiBold" Margin="116,367,116,44">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                <Border x:Name="bd"
+                        Background="{DynamicResource BackgroundContentHover}"
+                        CornerRadius="6">
+
+                                    <ContentPresenter HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                                </Border>
+
+                                <ControlTemplate.Triggers>
+
+                                    <!-- Hover -->
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="bd"
+                                Property="Background"
+                                Value="{DynamicResource BackgroundButtonHover}"/>
+                                    </Trigger>
+
+                                </ControlTemplate.Triggers>
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Label 
+                        x:Name="lblPasswordRepeat" 
+                        Content="Repetir Contraseña *" 
+                        HorizontalAlignment="Left" 
+                
+                        Margin="22,261,0,0" 
+                        VerticalAlignment="Top" 
+                        AutomationProperties.Name="" 
+                        AutomationProperties.HelpText="" 
+                        Foreground="{DynamicResource FontColor}" 
+                        FontSize="12" 
+                        FontWeight="SemiBold" Width="356" HorizontalContentAlignment="Left"/>
+
+                </Grid>
+            </Border>
+            <Border Margin="413,253,560,395" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                <TextBox x:Name="txtUserName" 
+                    GotFocus="Text_GotFocus"
+                    LostFocus="Text_LostFocus"
+                    Height="19"  
+                    TextWrapping="Wrap" 
+                    Text="n00487753@upn.pe" 
+                    Tag="n00487753@upn.pe" 
+                    Foreground="Gray" 
+                    VerticalAlignment="Center" 
+                    Background ="Transparent" 
+                    BorderThickness="0" 
+                    Margin="8,0,8,0"/>
+            </Border>
+            <Border x:Name="brdPasssword" Margin="413,340,560,309" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                <PasswordBox x:Name="txtPasssword" 
+                    Height="19" 
+                    Password="hola" 
+                    Tag="hola"
+                    Foreground="Gray" 
+                    VerticalAlignment="Center" 
+                    Background ="Transparent"
+                    GotFocus="Text_GotFocus"
+                    LostFocus="Text_LostFocus"
+                    BorderThickness="0" 
+                    Margin="8,0,8,0"/>
+            </Border>
+            <Border x:Name="brdPasswordRepeat" Margin="413,416,560,233" BorderThickness="2" BorderBrush="{DynamicResource BackgroundMargin}" CornerRadius="12" Background="#4DF4F2F2">
+                <PasswordBox x:Name="txtPasswordRepeat" 
+                    Height="19" 
+                    Password="hola" 
+                    Tag="hola"
+                    Foreground="Gray" 
+                    VerticalAlignment="Center" 
+                    Background ="Transparent"
+                    GotFocus="Text_GotFocus"
+                    LostFocus="Text_LostFocus"
+                    BorderThickness="0" 
+                    Margin="8,0,8,0"/>
+            </Border>
+
+
+            <Button x:Name="btnClose"
+ Background="Transparent"
+ BorderBrush="Transparent"
+ BorderThickness="1"
+ ToolTip="Cerrar aplicación"
+ Padding="0" 
+ Template="{DynamicResource SidebarTemplate}" Click="btnClose_Click" Height="26" Canvas.Left="1198" Width="31" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1214,16,0,0">
+                <Grid Height="62" Width="57">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Path x:Name="IconPath"
+         Data="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"
+
+         StrokeThickness="1.8"
+         StrokeEndLineCap="Round"
+         StrokeStartLineCap="Round"
+
+         HorizontalAlignment="Left"
+         VerticalAlignment="Top" Height="19" Stretch="Fill" Width="20" Margin="4,2,0,0">
+                        <Path.Stroke>
+                            <SolidColorBrush Color ="{DynamicResource SidebarButtonNormal}" />
+                        </Path.Stroke>
+                    </Path>
+                </Grid>
+            </Button>
+            <Label 
+    x:Name="lblCargando" 
+    Content="Cargando..." 
+    HorizontalAlignment="Left" 
+    VerticalAlignment="Top" 
+    AutomationProperties.Name="" 
+    AutomationProperties.HelpText="" 
+    Foreground="{DynamicResource FontColor}" 
+    FontSize="20" 
+    FontWeight="Bold" Width="440" HorizontalContentAlignment="Center" Margin="404,567,0,0"/>
+
+        </Grid>
+    </Border>
+
+</Window>

@@ -1,0 +1,53 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache
+.vs/
+
+# Rider (si usas JetBrains)
+.idea/
+
+# Build logs
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# .NET Core
+project.assets.json
+*.dll
+*.exe
+*.pdb
+
+# Publish output
+publish/
+
+# Test results
+TestResults/
+coverage/
+
+# =========================
+# Secrets / config
+# =========================
+
+appsettings.Development.json
+appsettings.*.local.json
+
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+Thumbs.db

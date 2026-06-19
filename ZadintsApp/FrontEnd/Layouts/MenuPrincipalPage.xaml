@@ -1,0 +1,735 @@
+﻿<Page x:Class="Zrutas.UI.Views.Content.MenuPrincipalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Zrutas.UI.Views.Content"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1020"
+      Title="Main">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="373*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            
+            Effect="{DynamicResource ShadowStyle2}"
+            Padding="18" Grid.Row="1" Margin="13,0,776,0">
+
+            <Grid Margin="-11,0,-11,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="61*"/>
+                    <ColumnDefinition Width="146*"/>
+                </Grid.ColumnDefinitions>
+                <Border
+                    Background="#00C689"
+                    CornerRadius="10"
+                    BorderBrush="#00845B"
+                    BorderThickness="0.5"
+                     Margin="4,12,1,13" Grid.RowSpan="2">
+
+                    <Path x:Name="IconPath1"
+                            Data="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"
+                            StrokeThickness="1.8"
+                            StrokeEndLineCap="Round"
+                            StrokeStartLineCap="Round"
+                            Stroke="White"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" Height="35" Stretch="Fill" Width="40"/>
+
+                </Border>
+
+                <TextBlock
+                    x:Name="lblVentasHoyTitle" 
+                    Text="Ventas realizadas Hoy" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="gray" 
+                    FontSize="12" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,17,4,0" Grid.Column="1" FontFamily="Tahoma"/>
+                <TextBlock
+                    x:Name="lblVentasHoy" 
+                    Text="0" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="{DynamicResource FontColor}" 
+                    FontSize="20" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,0,4,9" Grid.Column="1" FontFamily="Tahoma" Grid.Row="1"/>
+            </Grid>
+
+        </Border>
+        <Label 
+            x:Name="lblTitleGlobal" 
+            Content="Menu Principal" 
+            HorizontalAlignment="Left" 
+            Margin="17,0,0,0" 
+            VerticalAlignment="Center" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            FontSize="25" 
+            FontWeight="Bold" Height="44" Width="187"/>
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            
+            Margin="555,18,17,28"
+            Effect="{DynamicResource ShadowStyle2}"
+             Grid.Row="2">
+            <Grid Margin="7,10,7,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="23*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="51*"/>
+                    <RowDefinition Height="218*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    x:Name="lblProductosmas_vendidos" 
+                    Text="Productos más vendidos hoy" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="{DynamicResource FontColor}" 
+                    TextAlignment="Center"
+                    FontSize="12" 
+                    FontWeight="Light" 
+                    IsEnabled="False" FontFamily="Tahoma"/>
+
+                <Border
+    Background="#E8E8E8"
+    CornerRadius="5"
+    
+    Padding="18" Margin="0,0,0,4" Grid.Row="1">
+
+                    <Grid Margin="-18,-18,-18,-18">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="69*"/>
+                            <ColumnDefinition Width="71*"/>
+                            <ColumnDefinition Width="77*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock
+            x:Name="lblPlatoName1" 
+            Text="Nombre del producto" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="gray" 
+            FontSize="12" 
+            FontWeight="Light" 
+            IsEnabled="False" Margin="1,-45,22,70" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock
+                    x:Name="lblPlatoName" 
+                    Text="Nombre del producto" 
+                    AutomationProperties.Name="" 
+                            TextAlignment="Center"
+                    AutomationProperties.HelpText="" 
+                    Foreground="gray" 
+                    FontSize="12" 
+                    FontWeight="Light" 
+                    IsEnabled="False" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="lblPlatoName_Copiar" 
+                            Text="Ventas" 
+                            AutomationProperties.Name="" 
+                            TextAlignment="Center"
+                            AutomationProperties.HelpText="" 
+                            Foreground="gray" 
+                            FontSize="12" 
+                            FontWeight="Light" 
+                            IsEnabled="False" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="lblPlatoName_Copiar1" 
+                            Text="Opciones" 
+                            AutomationProperties.Name="" 
+                            TextAlignment="Center"
+                            AutomationProperties.HelpText="" 
+                            Foreground="gray" 
+                            FontSize="12" 
+                            FontWeight="Light" 
+                            IsEnabled="False" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+
+                    </Grid>
+
+                </Border>
+
+                <Border Grid.Column="0"
+    Background="Transparent"
+    CornerRadius="20"
+    
+    
+    Padding="18" Grid.Row="2">
+
+                    <Grid Margin="-18,-18,-18,-18">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="19*"/>
+                            <ColumnDefinition Width="143*"/>
+                            <ColumnDefinition Width="108*"/>
+                            <ColumnDefinition Width="164*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border                    CornerRadius="10"
+            
+            Margin="0,0,19,0">
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="15" RadiusY="15" Rect="0,0,50,48"/>
+                            </Border.Clip>
+                            <Image x:Name="imgPlato1" Source="/Resources/lnYep.png" Stretch="Fill" Margin="0,0,-31,0"/>
+                        </Border>
+                        <TextBlock
+            x:Name="lblProducto1" 
+            Text="--" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="Black" 
+                            TextAlignment="Left"
+            FontSize="12" 
+            FontWeight="Light" 
+            IsEnabled="False" Margin="0,15,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="lblVentas1" 
+                            Text="--" 
+                            AutomationProperties.Name="" 
+                            AutomationProperties.HelpText="" 
+                            Foreground="#00A270" 
+                            TextAlignment="Center"
+                            FontSize="12" 
+                            FontWeight="Light" 
+                            IsEnabled="False" Margin="0,16,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+
+                        <Button x:Name="btnTop1" 
+    Content="Vender Más" 
+                                Grid.Column="3"
+    Foreground="White"
+    Background="#EA6233"
+    Template="{DynamicResource ButtonTwo}"
+    FontSize="14.5"
+    FontWeight="SemiBold" Margin="16,8,16,8" RenderTransformOrigin="0.5,0.5" Click="btnTop1_Click"/>
+
+                    </Grid>
+
+                </Border>
+
+                <Border
+Background="Transparent"
+CornerRadius="20"
+
+
+Padding="18" Grid.Row="3" Margin="0,5,0,162">
+
+                    <Grid Margin="-18,-18,-18,-18">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="145*"/>
+                            <ColumnDefinition Width="108*"/>
+                            <ColumnDefinition Width="164*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border                    CornerRadius="10"
+        
+        Margin="0,0,2,0">
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="15" RadiusY="15" Rect="0,0,50,48"/>
+                            </Border.Clip>
+                            <Image x:Name="imgPlato2" Source="/Resources/lnYep.png" Stretch="Fill" Margin="0,0,-31,0"/>
+                        </Border>
+                        <TextBlock
+        x:Name="lblProducto2" 
+        Text="--" 
+        AutomationProperties.Name="" 
+        AutomationProperties.HelpText="" 
+        Foreground="Black" 
+                        TextAlignment="Left"
+        FontSize="12" 
+        FontWeight="Light" 
+        IsEnabled="False" Margin="0,15,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock
+                        x:Name="lblVentas2" 
+                        Text="--" 
+                        AutomationProperties.Name="" 
+                        AutomationProperties.HelpText="" 
+                        Foreground="#00A270" 
+                        TextAlignment="Center"
+                        FontSize="12" 
+                        FontWeight="Light" 
+                        IsEnabled="False" Margin="0,16,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+
+                        <Button x:Name="btnTop2" 
+Content="Vender Más" 
+                            Grid.Column="3"
+Foreground="White"
+Background="#EA6233"
+Template="{DynamicResource ButtonTwo}"
+FontSize="14.5"
+FontWeight="SemiBold" Margin="16,8,16,8" RenderTransformOrigin="0.5,0.5" Click="btnTop2_Click"/>
+
+                    </Grid>
+
+                </Border>
+                <Border
+                    Background="Transparent"
+                    CornerRadius="20"
+
+
+                    Padding="18" Grid.Row="3" Margin="0,61,0,106">
+
+                    <Grid Margin="-18,-18,-18,-18">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="147*"/>
+                            <ColumnDefinition Width="108*"/>
+                            <ColumnDefinition Width="164*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border                    CornerRadius="10"
+        
+                            Margin="0,0,9,0">
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="15" RadiusY="15" Rect="0,0,50,48"/>
+                            </Border.Clip>
+                            <Image x:Name="cc" Source="/Resources/lnYep.png" Stretch="Fill" Margin="0,0,-31,0"/>
+                        </Border>
+                        <TextBlock
+                            x:Name="lblProducto3" 
+                            Text="--" 
+                            AutomationProperties.Name="" 
+                            AutomationProperties.HelpText="" 
+                            Foreground="Black" 
+                            TextAlignment="Left"
+                            FontSize="12" 
+                            FontWeight="Light" 
+                            IsEnabled="False" Margin="0,15,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="lblVentas3" 
+                            Text="--" 
+                            AutomationProperties.Name="" 
+                            AutomationProperties.HelpText="" 
+                            Foreground="#00A270" 
+                            TextAlignment="Center"
+                            FontSize="12" 
+                            FontWeight="Light" 
+                            IsEnabled="False" Margin="0,16,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+
+                        <Button x:Name="btnTop3" 
+                            Content="Vender Más" 
+                            Grid.Column="3"
+                            Foreground="White"
+                            Background="#EA6233"
+                            Template="{DynamicResource ButtonTwo}"
+                            FontSize="14.5"
+                            FontWeight="SemiBold" Margin="16,8,16,8" RenderTransformOrigin="0.5,0.5" Click="btnTop3_Click"/>
+
+                    </Grid>
+
+                </Border>
+                <Border
+                    Background="Transparent"
+                    CornerRadius="20"
+
+
+                    Padding="18" Grid.Row="3" Margin="0,117,0,50">
+
+                    <Grid Margin="-18,-18,-18,-18">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="147*"/>
+                            <ColumnDefinition Width="108*"/>
+                            <ColumnDefinition Width="164*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border                    CornerRadius="10"
+        
+                            Margin="0,0,9,0">
+                            <Border.Clip>
+                                <RectangleGeometry RadiusX="15" RadiusY="15" Rect="0,0,50,48"/>
+                            </Border.Clip>
+                            <Image x:Name="imgPlato4" Source="/Resources/lnYep.png" Stretch="Fill" Margin="0,0,-31,0"/>
+                        </Border>
+                        <TextBlock
+                            x:Name="lblProducto4" 
+                            Text="--" 
+                            AutomationProperties.Name="" 
+                            AutomationProperties.HelpText="" 
+                            Foreground="Black" 
+                            TextAlignment="Left"
+                            FontSize="12" 
+                            FontWeight="Light" 
+                            IsEnabled="False" Margin="0,15,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock
+                            x:Name="lblVentas4" 
+                            Text="--" 
+                            AutomationProperties.Name="" 
+                            AutomationProperties.HelpText="" 
+                            Foreground="#00A270" 
+                            TextAlignment="Center"
+                            FontSize="12" 
+                            FontWeight="Light" 
+                            IsEnabled="False" Margin="0,16,0,0" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+                            <TextBlock.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0.053"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+
+                        <Button x:Name="btnTop4" 
+                            Content="Vender Más" 
+                            Grid.Column="3"
+                            Foreground="White"
+                            Background="#EA6233"
+                            Template="{DynamicResource ButtonTwo}"
+                            FontSize="14.5"
+                            FontWeight="SemiBold" Margin="16,8,16,8" RenderTransformOrigin="0.5,0.5" Click="btnTop4_Click"/>
+
+                    </Grid>
+
+                </Border>
+            </Grid>
+
+
+
+
+        </Border>
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            
+            Effect="{DynamicResource ShadowStyle2}"
+            Padding="18" Grid.Row="1" Margin="249,0,534,0">
+
+            <Grid Margin="-8,0,-8,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="63*"/>
+                    <ColumnDefinition Width="146*"/>
+                </Grid.ColumnDefinitions>
+                <Border
+                    Background="#FE6B20"
+                    CornerRadius="10"
+                    BorderBrush="#A94715"
+                    BorderThickness="0.5" Margin="4,12,1,13" Grid.RowSpan="2">
+
+                    <Path x:Name="IconPath2"
+    Data="M192 160L192 144C192 99.8 278 64 384 64C490 64 576 99.8 576 144L576 160C576 190.6 534.7 217.2 474 230.7C471.6 227.9 469.1 225.2 466.6 222.7C451.1 207.4 431.1 195.8 410.2 187.2C368.3 169.7 313.7 160.1 256 160.1C234.1 160.1 212.7 161.5 192.2 164.2C192 162.9 192 161.5 192 160.1zM496 417L496 370.8C511.1 366.9 525.3 362.3 538.2 356.9C551.4 351.4 564.3 344.7 576 336.6L576 352C576 378.8 544.5 402.5 496 417zM496 321L496 288C496 283.5 495.6 279.2 495 275C510.5 271.1 525 266.4 538.2 260.8C551.4 255.2 564.3 248.6 576 240.5L576 255.9C576 282.7 544.5 306.4 496 320.9zM64 304L64 288C64 243.8 150 208 256 208C362 208 448 243.8 448 288L448 304C448 348.2 362 384 256 384C150 384 64 348.2 64 304zM448 400C448 444.2 362 480 256 480C150 480 64 444.2 64 400L64 384.6C75.6 392.7 88.5 399.3 101.8 404.9C143.7 422.4 198.3 432 256 432C313.7 432 368.3 422.3 410.2 404.9C423.4 399.4 436.3 392.7 448 384.6L448 400zM448 480.6L448 496C448 540.2 362 576 256 576C150 576 64 540.2 64 496L64 480.6C75.6 488.7 88.5 495.3 101.8 500.9C143.7 518.4 198.3 528 256 528C313.7 528 368.3 518.3 410.2 500.9C423.4 495.4 436.3 488.7 448 480.6z"
+    StrokeThickness="1.8"
+    StrokeEndLineCap="Round"
+    StrokeStartLineCap="Round"
+    Stroke="White"
+    HorizontalAlignment="Left"
+    VerticalAlignment="Top" Height="35" Stretch="Fill" Width="38" Margin="10,14,0,0"/>
+
+                </Border>
+
+                <TextBlock
+                    x:Name="lblIngresoTotalHoyTitle" 
+                    Text="Ingreso total hoy" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="gray" 
+                    FontSize="12" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,17,35,0" Grid.Column="1" FontFamily="Tahoma"/>
+                <TextBlock
+                    x:Name="lblIngresoTotalHoy" 
+                    Text="S/0" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="{DynamicResource FontColor}" 
+                    FontSize="20" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,0,35,9" Grid.Column="1" FontFamily="Tahoma" Grid.Row="1"/>
+            </Grid>
+
+        </Border>
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            
+            Effect="{DynamicResource ShadowStyle2}"
+            Padding="18" Grid.Row="1" Margin="736,0,17,0">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="67*"/>
+                    <ColumnDefinition Width="126*"/>
+                    <ColumnDefinition Width="38*"/>
+                </Grid.ColumnDefinitions>
+                <Border
+                    Background="#3DA5F4"
+                    CornerRadius="10"
+                    BorderBrush="#286EA2"
+                    BorderThickness="0.5"
+                    Margin="4,12,1,13" Grid.RowSpan="2">
+
+                    <Path x:Name="IconPath3"
+        Data="M280 128C266.7 128 256 138.7 256 152C256 165.3 266.7 176 280 176L296 176L296 209.3C188.8 220.7 104.2 307.7 96.6 416L543.5 416C535.8 307.7 451.2 220.7 344 209.3L344 176L360 176C373.3 176 384 165.3 384 152C384 138.7 373.3 128 360 128L280 128zM88 464C74.7 464 64 474.7 64 488C64 501.3 74.7 512 88 512L552 512C565.3 512 576 501.3 576 488C576 474.7 565.3 464 552 464L88 464z"
+                          StrokeThickness="1.8"
+        StrokeEndLineCap="Round"
+        StrokeStartLineCap="Round"
+        Stroke="White"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center" Height="35" Stretch="Fill" Width="40"/>
+
+                </Border>
+
+                <TextBlock
+                    x:Name="lblProductosRestantesTitle" 
+                    Text="Ventas día anterior" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="gray" 
+                    FontSize="12" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,17,0,0" Grid.Column="1" FontFamily="Tahoma" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.053"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock
+                    x:Name="lblVentasAyer" 
+                    Text="0" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="{DynamicResource FontColor}" 
+                    FontSize="20" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,0,0,9" Grid.Column="1" FontFamily="Tahoma" Grid.Row="1"/>
+            </Grid>
+
+        </Border>
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            
+            Effect="{DynamicResource ShadowStyle2}"
+            Padding="18" Grid.Row="1" Margin="491,0,289,0">
+
+            <Grid Margin="-8,0,-8,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="63*"/>
+                    <ColumnDefinition Width="146*"/>
+                </Grid.ColumnDefinitions>
+                <Border
+                    Background="#FFFD3B3B"
+                    CornerRadius="10"
+                    BorderBrush="#A94715"
+                    BorderThickness="0.5" Margin="4,12,1,13" Grid.RowSpan="2">
+
+                    <Path x:Name="IconPath4"
+                        Data="M192 160L192 144C192 99.8 278 64 384 64C490 64 576 99.8 576 144L576 160C576 190.6 534.7 217.2 474 230.7C471.6 227.9 469.1 225.2 466.6 222.7C451.1 207.4 431.1 195.8 410.2 187.2C368.3 169.7 313.7 160.1 256 160.1C234.1 160.1 212.7 161.5 192.2 164.2C192 162.9 192 161.5 192 160.1zM496 417L496 370.8C511.1 366.9 525.3 362.3 538.2 356.9C551.4 351.4 564.3 344.7 576 336.6L576 352C576 378.8 544.5 402.5 496 417zM496 321L496 288C496 283.5 495.6 279.2 495 275C510.5 271.1 525 266.4 538.2 260.8C551.4 255.2 564.3 248.6 576 240.5L576 255.9C576 282.7 544.5 306.4 496 320.9zM64 304L64 288C64 243.8 150 208 256 208C362 208 448 243.8 448 288L448 304C448 348.2 362 384 256 384C150 384 64 348.2 64 304zM448 400C448 444.2 362 480 256 480C150 480 64 444.2 64 400L64 384.6C75.6 392.7 88.5 399.3 101.8 404.9C143.7 422.4 198.3 432 256 432C313.7 432 368.3 422.3 410.2 404.9C423.4 399.4 436.3 392.7 448 384.6L448 400zM448 480.6L448 496C448 540.2 362 576 256 576C150 576 64 540.2 64 496L64 480.6C75.6 488.7 88.5 495.3 101.8 500.9C143.7 518.4 198.3 528 256 528C313.7 528 368.3 518.3 410.2 500.9C423.4 495.4 436.3 488.7 448 480.6z"
+                        StrokeThickness="1.8"
+                        StrokeEndLineCap="Round"
+                        StrokeStartLineCap="Round"
+                        Stroke="White"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" Height="35" Stretch="Fill" Width="38" Margin="10,14,0,0"/>
+
+                </Border>
+
+                <TextBlock
+                    x:Name="lblIngresoTotalTitle1" 
+                    Text="Ingresos hasta hoy" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="gray" 
+                    FontSize="12" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,17,35,0" Grid.Column="1" FontFamily="Tahoma"/>
+                <TextBlock
+                    x:Name="lblIngresoTotalRecaudado" 
+                    Text="S/0" 
+                    AutomationProperties.Name="" 
+                    AutomationProperties.HelpText="" 
+                    Foreground="{DynamicResource FontColor}" 
+                    FontSize="20" 
+                    FontWeight="Light" 
+                    IsEnabled="False" Margin="10,0,35,9" Grid.Column="1" FontFamily="Tahoma" Grid.Row="1"/>
+            </Grid>
+
+        </Border>
+        <Border Grid.Column="0"
+            Background="#FAFAFA"
+            CornerRadius="20"
+            
+            Margin="17,18,483,28"
+            Effect="{DynamicResource ShadowStyle2}"
+            Grid.Row="2"/>
+        <TextBlock
+            x:Name="lblProductosRestantes_Copiar1" 
+            Text="Máquinas Conectadas" 
+            AutomationProperties.Name="" 
+            AutomationProperties.HelpText="" 
+            Foreground="{DynamicResource FontColor}" 
+            TextAlignment="Center"
+            FontSize="12" 
+            FontWeight="Light" 
+            IsEnabled="False" FontFamily="Tahoma" Margin="29,38,723,313" Grid.Row="2"/>
+        <ListBox x:Name="lstMaquinasConectadas"
+            Background="#F9F9F9"
+            Margin="29,65,496,42"
+            BorderBrush="#EEEEEE"
+            BorderThickness="1"                         
+            Padding="8" Grid.Row="2">
+
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="Padding" Value="16,12"/>
+                    <Setter Property="Margin" Value="0,4"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="Foreground" Value="#222222"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#E8440A"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+
+
+    </Grid>
+</Page>
